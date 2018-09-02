@@ -1,0 +1,42 @@
+UDP :
+
+page download time : 21.768 s
+
+no. of udp datagrams :1737 for a file of size 1.8 MB
+
+size of datagram : 1074 bytes .
+
+
+steps and documentation : 
+
+
+* to compile the both client and server codes use makefile command make on the terminal .
+
+* we used the file  to transfer from client to server.
+
+* in the server code , the host segment of the code is commented out initially assuming that  server and client are communicating on different machines  .
+
+* If we have to  run the server and  client on same computer we have to uncomment the host segment of the code .
+
+* to run the server use ./server <port no.>  eg. ./server 9898  NOTE :  port no. should be > 1024 and < 65536(2^16) .
+
+* to run the client use ./client <IP address of server> <port no.> eg. ./client 10.105.65.40 9898 . If both client and server are running on the same machine use ./client localhost <port no.>  eg. ./client localhost 9898 .
+
+* wireshark is used to analyze the sent TCP packets .
+
+* use the filter ip.addr == <ip address of the client > in the server side analysis .
+
+* no. of udp packets are counted from the statistics --> capture summary .
+
+
+* time to transfer is computed by taking time difference of first file packet  sent and to last file packet sent .
+
+UDP justifications :
+
+
+* we can intutively justify that for large  file size , no. of retransmitted packets increase as the chance for a packet to get lost in the network increase for large data .
+
+* larger the file , more time it takes to transfer it on the network .
+
+* larger the file size , more the no. of UDP datagram .
+

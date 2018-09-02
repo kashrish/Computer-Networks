@@ -1,0 +1,92 @@
+*   to compile   use 'make' command .
+
+*   to run use ./server1   
+
+*  ports are fixed at 9001 9002 9003 9004 9005 for servers 1 to 5 respectively
+
+
+*  ip address  10.105.65.40   of my laptop while  connected to LAN
+*  it will change with network connnection .
+
+
+*  below is a sample  run with 5 friends chatting with 1 another .
+
+* 'make clean' command to clean the .o files .
+
+
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ ./server1
+Chat Server Running ....
+Tom / hi
+Harry: whats up
+Ron: hello Jack from Ron
+Bob / are you coming today ?
+
+connection closed ...
+^C
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$
+
+
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ ./server2
+Chat Server Running ....
+Jack: hi
+Ron / hello
+Bob / hi bro
+Harry: hello Tommy
+Bob / whats up bro ?
+
+connection closed ...
+
+connection closed ...
+^C
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ 
+
+
+
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ ./server3
+Chat Server Running ....
+Tom: hi bro
+Harry / what are you doing .
+Harry: nothing just chilling .
+Ron / whats up Ron ?
+Jack: are you coming today ?
+Tom: whats up bro ?
+
+connection closed ...
+
+connection closed ...
+
+connection closed ...
+^C
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ 
+
+
+
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ ./server4
+Chat Server Running ....
+Jack / whats up
+Tom / hello Tommy
+Bob: what are you doing .
+Bob / nothing just chilling .
+Ron: hiiii
+^C
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ 
+
+
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ ./server5
+Chat Server Running ....
+Tom: hello
+Jack / hello Jack from Ron
+Bob: whats up Ron ?
+Harry / hiiii
+
+connection closed ...
+
+connection closed ...
+
+connection closed ...
+
+connection closed ...
+^C
+rishabh@rishabh-Vostro-3546:~/Documents/CN/socket_programming/ass5$ 
+
+

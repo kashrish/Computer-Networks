@@ -1,0 +1,106 @@
+
+ Q 1.
+
+                 Application layer                Transport layer                      Network Layer
+              
+  UDP               -                                   UDP                                 IPv4
+  
+  pic1              HTTP                                TCP                                 IPv4
+  
+  pic2              HTTP                                TCP                                 IPv4
+  
+  pic3              HTTP                                TCP                                 IPv4
+  
+  pic4              HTTP                                TCP                                 IPv4      
+  
+  pic5              HTTP                                TCP                                 IPv4   
+                                 
+                                 
+  Ethernet is the protocol in the data link layer for all cases.
+  
+  
+                                 
+ Q 2. a)
+ 
+ 
+ pic 1:
+ 
+	18 TCP packets.
+	No all packets are not of same size.
+	different packet sizes(in bytes) : 66,74,217,1514,2277,4410,14546,24682    
+	
+ pic 2:
+ 	
+	2294 TCP packets.
+	No all packets are not of same size.
+	different packet sizes(in bytes) : 66,74,78,217,1514,2962,4410,5858,7306,8754,10202,11650,13098,14546,15994,17442,18890,20338,21786,23234,
+	26130,49298 .	  
+	
+	
+ pic 3:
+ 
+ 	114 TCP packets.
+	No all packets are not of same size.
+	different packet sizes(in bytes) : 66,74,217,1514,2962,4410,5858,7306,8754,10202,11650,12219,13098,14546,15994,17442,20338,21786,24682 .
+	
+	
+ pic 4:
+ 	
+	600 TCP packets.
+	No all packets are not of same size.
+	different packet sizes(in bytes) : 66,74,217,1514,2962,4410,5858,7306,8754,10202,11650,13098,14546,15994,17442,18890,20338,21786,
+	23234 .	
+	
+	
+ pic 5:
+ 	
+ 	150 TCP packets.
+	No all packets are not of same size.
+	different packet sizes(in bytes) : 66,74,217,1514,2962,4410,5858,7306,8754,10202,11650,12782,13098,14546,15994,17442,18890,20338,23234 .	
+	                      
+	                      
+ Q 2 b)
+ 
+ Yes , all UDP packets are of same size.
+ 
+ size of UDP packet = 1512 bytes
+ 
+ 
+ Q 2 c)
+ 
+ done  see the images images.
+ 
+ Q 2 d)
+ 
+ Bandwidth       Data Transfered     no. of packets     Time      Throughput
+  (Kbps)             (kb)                                (s)        (kbps)
+ 
+ 	64      				80.4               56               10.3        7.8
+ 	
+ 	128               158                110              10.1        15.6
+ 	
+ 	256               314                219              10.1        31.1
+ 	
+ 	512               627                437              10.0        62.7
+ 	
+ 	1024              1249               872              10.0        124.9
+ 	
+ 	2048              2499               1743             10.0        249.9
+ 	
+ 	
+ Q 3    pic                 no of packet retransmitted
+ 
+ 		pic1                            0
+ 		
+ 		pic2                            10
+ 		
+ 		pic3                            1
+ 		
+ 		pic4                            1
+ 		
+ 		pic5                            0
+ 
+ 
+ Q 4   done.
+ 	   
+                      

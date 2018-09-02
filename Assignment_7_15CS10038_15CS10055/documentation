@@ -1,0 +1,14 @@
+to compile :
+
+g++ -w -o ping ping.c
+
+
+
+
+to run :
+first  $ sudo su
+
+to go into user mode 
+
+
+then  ./ping <destination> <no of packets>   <message length>

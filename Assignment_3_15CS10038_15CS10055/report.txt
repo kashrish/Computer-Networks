@@ -1,0 +1,74 @@
+
+packet distribution :-
+
+
+Packet Lengths:
+Topic / Item       Count         Average       Min val       Max val       Rate (ms)     Percent       Burst rate    Burst start  
+----------------------------------------------------------------------------------------------------------------------------------
+Packet Lengths     3241          1037.85       66            1514          -0.7576       100%          0.0300        9.178        
+ 0-19              0             -             -             -             -0.0000       0.00%         -             -            
+ 20-39             0             -             -             -             -0.0000       0.00%         -             -            
+ 40-79             1064          67.38         66            78            -0.2487       32.83%        0.0300        9.178        
+ 80-159            0             -             -             -             -0.0000       0.00%         -             -            
+ 160-319           2             202.00        186           218           -0.0005       0.06%         0.0200        4.862        
+ 320-639           0             -             -             -             -0.0000       0.00%         -             -            
+ 640-1279          3             1054.00       982           1090          -0.0007       0.09%         0.0100        14.013       
+ 1280-2559         2172          1514.00       1514          1514          -0.5077       67.02%        1.0700        2.521        
+ 2560-5119         0             -             -             -             -0.0000       0.00%         -             -            
+ 5120 and greater  0             -             -             -             -0.0000       0.00%         -             -            
+
+
+1.  No of TCP Packets 3241
+2.  no of retransmitted TCP packets :  3
+3.  Time  to transfer the file :  4.862453735  seconds
+4.  TCP packet size for file = 1514 bytes .
+
+
+steps and documentation : 
+
+
+* to compile the both client and server codes use makefile command make on the terminal .
+
+* we used the file ch7.ppt to transfer from client to server.
+
+* in the server code , the host segment of the code is commented out initially assuming that  server and client are communicating on different machines  .
+
+* If we have to  run the server and  client on same computer we have to uncomment the host segment of the code .
+
+* to run the server use ./server <port no.>  eg. ./server 9898  NOTE :  port no. should be > 1024 and < 65536(2^16) .
+
+* to run the client use ./client <IP address of server> <port no.> eg. ./client 10.105.65.40 9898 . If both client and server are running on the same machine use ./client localhost <port no.>  eg. ./client localhost 9898 .
+
+* wireshark is used to analyze the sent TCP packets .
+
+* use the filter ip.addr == <ip address of the client > in the server side analysis .
+
+* no. of tcp packets are counted from the statistics --> capture summary .
+
+* packet length distribution  goto statistics --> packet lengths .
+
+* time to transfer is computed by taking time difference of first file packet (1514 bytes) sent and to last file packet sent (1515 bytes) .
+
+* no. of retransmitted packet is computed by applying the filter tcp.analysis.retransmission.
+
+
+
+justifications :
+
+
+* we can intutively justify that for large  file size , no. of retransmitted packets increase as the chance for a packet to get lost in the network increase for large data .
+
+* larger the file , more time it takes to transfer it on the network .
+
+* the largest TCP packet size (1514 bytes) corresponds to the file data tranfer and smaller sizes 66 ,78 correspond to the SYN , ACK ,FIN messages . 
+
+* larger the file size , more the no. of TCP packets .
+
+
+
+
+
+
+
+
+
